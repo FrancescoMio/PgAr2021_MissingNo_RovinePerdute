@@ -1,5 +1,9 @@
 import java.util.ArrayList;
-//Questa classe rappresenta una città
+
+/**Questa classe descrive una città
+ * @author Giovanni
+ *
+ */
 public class City {
 	
 	private int x;
@@ -20,6 +24,9 @@ public class City {
 		setLinkArray();
 	}
 	
+	/**Ritorna la coordinata x
+	 * @return x
+	 */
 	public int getX() {
 		return x;
 	}
@@ -27,6 +34,9 @@ public class City {
 
 
 
+	/**Ritorna la coordinata y
+	 * @return y
+	 */
 	public int getY() {
 		return y;
 	}
@@ -34,6 +44,9 @@ public class City {
 
 
 
+	/**Ritorna la coordinata h (chi poi la chiama h? dovrebbe essere z)
+	 * @return h
+	 */
 	public int getH() {
 		return h;
 	}
@@ -41,6 +54,9 @@ public class City {
 
 
 
+	/**Ritorna il nome della città
+	 * @return
+	 */
 	public String getName() {
 		return name;
 	}
@@ -48,13 +64,17 @@ public class City {
 
 
 
+	/**Ritorna l'insieme di indici di città a cui questa città è collegata
+	 * @return ArrayList<Integer> collegamenti
+	 */
 	public ArrayList<Integer> getLinksArray() {
 		return linksArray;
 	}
+	
 
-
-
-
+	/**
+	 * Perchè lavorare con gli ArrayList è difficile
+	 */
 	private void setLinkArray() {
 		String[] parts = links.split("-");
 		
@@ -65,6 +85,9 @@ public class City {
 
 
 
+	/**
+	 * il tuo classico toString()
+	 */
 	public String toString() {
 		String s = "";
 		s += x + " " + y + " " + h +" " + name + " " + linksArray;
